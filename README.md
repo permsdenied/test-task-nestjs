@@ -66,7 +66,6 @@ GET http://localhost:3000/api/events
   "id": 1,
   "event_id": 1,
   "user_id": "user123",
-  "created_at": "2025-11-09T18:00:00.000Z"
 }
 
 - **Нет свободных мест:**  
@@ -105,12 +104,10 @@ GET http://localhost:3000/api/events
     "id": 1,
     "event_id": 1,
     "user_id": "user123",
-    "created_at": "2025-11-09T18:00:00.000Z"
   },
   {
     "id": 2,
     "event_id": 1,
     "user_id": "user456",
-    "created_at": "2025-11-09T18:05:00.000Z"
   }
 ]
