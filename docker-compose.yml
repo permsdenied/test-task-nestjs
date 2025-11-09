@@ -1,0 +1,26 @@
+
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: bookings_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - '3306:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+
+  app:
+    build: .
+    environment:
+      DATABASE_URL: mysql://user:password@db:3306/bookings_db
+    depends_on:
+      - db
+    ports: 
+     - '3000:3000'
+
+
+volumes:
+  db_data:
